@@ -6,7 +6,7 @@ Licença: GNU GENERAL PUBLIC LICENSE - Version 3, 29 June 2007
 ------------
 
 ## Clonando o repositório:
-Após ter criado o seu projeto, entrar dentro da pasta e clonar o repositório do PyUtilBR com o comando abaixo:
+Após ter criado o seu projeto, entrar na pasta do projeto e clonar o repositório do PyUtilBR com o comando abaixo:
 ~~~ DOS
 git clone https://github.com/fabstussi/PyUtilBR.git
 ~~~
