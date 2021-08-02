@@ -1,0 +1,70 @@
+# Projeto: Utilidades para tela do terminal
+# Data: 01/08/2021
+# License: GNU GENERAL PUBLIC LICENSE - Version 3, 29 June 2007
+# Fabiano Stussi Pereira® - © 2021
+
+from datetime import datetime
+import locale
+
+
+class PyNumBR:
+    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+
+    @staticmethod
+    def ler_inteiro(msg: str,
+                    msg_erro='[Erro de tipo] É esperado um número inteiro, tecle enter para tentar novamente',
+                    tentativas=3) -> int:
+        mensagem = msg if msg[len(msg)-2:len(msg)-1] == ': ' else f'{msg}: '
+        while tentativas > 0:
+            numero = input(mensagem)
+            if numero.isnumeric():
+                numero = int(numero)
+                break
+            else:
+                print(msg_erro, f'[Tentativas restantes: {tentativas - 1}]')
+                tentativas -= 1
+                input()
+        else:
+            numero = 0
+        return numero
+
+    @staticmethod
+    def ler_real(msg: str,
+                 msg_erro='[Erro de tipo] É esperado um número real, tecle enter para tentar novamente',
+                 tentativas=3):
+        mensagem = msg if msg[len(msg) - 2:len(msg) - 1] == ': ' else f'{msg}: '
+        while tentativas > 0:
+            numero = input(mensagem).replace(',', '.')
+            teste = numero.split('.')
+            if len(teste) == 2:
+                if teste[0].isnumeric() and teste[1].isnumeric():
+                    numero = float(numero)
+                    break
+                else:
+                    print(msg_erro, f'[Tentativas restantes: {tentativas - 1}]')
+                    tentativas -= 1
+                    input()
+            else:
+                print(msg_erro, f'[Tentativas restantes: {tentativas - 1}]')
+                tentativas -= 1
+                input()
+        else:
+            numero = 0
+        return numero
+
+    @staticmethod
+    def mostra_real(num_float: float) -> str:
+        return str(num_float).replace('.', ',')
+
+    @staticmethod
+    def pega_data() -> str:
+        return datetime.now().strftime('%d/%m/%Y')
+
+    @staticmethod
+    def pega_hora() -> str:
+        return datetime.now().strftime('%H:%M')
+
+
+if __name__ == '__main__':
+    real = PyNumBR.ler_real('Entre com o valor')
+    print(real)
