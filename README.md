@@ -15,7 +15,7 @@ Após a importação do PyUtilBR, basta entrar no projeto e fazer o import:
 from PyUtilBR import PyNumBR as pnb
 from PyUtilBR import PyUtilTerminal as put
 ~~~
-O **PyNumBR** é utilizado para manipular números e data / hora.
+### O *PyNumBR* é utilizado para manipular números e data / hora.
 - Métodos:
 	- ```ler_inteiro``` -> Utilizado para ler números inteiros com validação, exibindo uma mensagem de erro caso o usuário digite alguma coisa diferente, a mensagem de erro é personalizável, bem como a quantidade de tentativas para digitar um número inteiro.
 		- Parâmetros:
@@ -30,3 +30,18 @@ O **PyNumBR** é utilizado para manipular números e data / hora.
 	- ```mostrar_real``` -> retorna o número com a virgula na separação dos decimais, não possui parâmetros.
 	- ```pega_data``` -> retorna a data no formato dd/mm/aaaa, não tem parâmetros.
 	- ```pega_hora``` -> retorne a hora no formato hh:mm, não tem parâmetros.
+
+### O *PyUtilTerminal* contém algumas ferramentas para facilitar o processo de criação de telas no terminal.
+- Métodos:
+	- ```cl_scr``` -> utilizado para limpar a tela do terminal.
+	- ```desenha_linha``` -> utilizado para a criação de uma linha com um símbulo qualquer:
+		- Parâmetros:
+			1. __simbulo:__ uma string que irá formar uma linha na tela do terminal. Obrigatório o preenchimento.
+			1. __tamanho:__ indica a quantidade de vezes que o símbolo irá ser repetido na tela do terminal, formando uma linha.
+	- ```titulo``` -> escreve uma frase de uma linha, entre duas linhas formadas por um símbolo personalizavel, o titulo fica centralizado.
+		- Parâmetros:
+			1. __texto:__ de preenchimento obrigatório, texto de linha unica, o tamanho é calculado automaticamente.
+			2. __simbolo:__ símbolo que será usado para desenhar as linhas acima e abaixo do texto.
+	- ```titulos_ml``` -> desenha uma caixa na tela com um símbolo definido, com texto de multiplas linhas escrito e centralizado.
+		- Parâmetro:
+			1. __texto:__ uma lista de frases, cada elemento da lista será inserido em uma linha diferênte.
