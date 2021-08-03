@@ -1,6 +1,6 @@
 # Projeto: **PyUtilBR**
 
-Priado por: Fabiano Stussi Pereira em 01/08/2021.
+Criado por: Fabiano Stussi Pereira em 01/08/2021.
 Licença: GNU GENERAL PUBLIC LICENSE - Version 3, 29 June 2007
 
 ------------
