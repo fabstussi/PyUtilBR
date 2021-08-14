@@ -13,9 +13,8 @@ locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 def ler_inteiro(msg: str,
                 msg_erro='[Erro de tipo] É esperado um número inteiro, tecle enter para tentar novamente',
                 tentativas=3) -> int:
-    mensagem = msg if msg[len(msg)-2:len(msg)-1] == ': ' else f'{msg}: '
     while tentativas > 0:
-        numero = input(mensagem)
+        numero = input(msg)
         if numero.isnumeric():
             numero = int(numero)
             break
@@ -31,9 +30,8 @@ def ler_inteiro(msg: str,
 def ler_real(msg: str,
              msg_erro='[Erro de tipo] É esperado um número real, tecle enter para tentar novamente',
              tentativas=3):
-    mensagem = msg if msg[len(msg) - 2:len(msg) - 1] == ': ' else f'{msg}: '
     while tentativas > 0:
-        numero = input(mensagem).replace(',', '.')
+        numero = input(msg).replace(',', '.')
         teste = numero.split('.')
         if len(teste) == 2:
             if teste[0].isnumeric() and teste[1].isnumeric():
@@ -53,7 +51,8 @@ def ler_real(msg: str,
 
 
 def mostra_real(num_float: float) -> str:
-    return str(num_float).replace('.', ',')
+    valor = f'{num_float:,}'.split('.')
+    return f'{valor[0].replace(",", ".")},{valor[1]}'
 
 
 def pega_data() -> str:
