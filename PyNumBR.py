@@ -51,8 +51,7 @@ def ler_real(msg: str,
 
 
 def mostra_real(num_float: float) -> str:
-    valor = f'{num_float:,}'.split('.')
-    return f'{valor[0].replace(",", ".")},{valor[1]}'
+    return f'{num_float:,}'.split('.')[0].replace(',', '.') + ',' + f'{num_float:,}'.split('.')[1]
 
 
 def pega_data() -> str:
@@ -64,4 +63,5 @@ def pega_hora() -> str:
 
 
 if __name__ == '__main__':
-    pass
+    num = ler_real('Leia: ')
+    print(mostra_real(num))
