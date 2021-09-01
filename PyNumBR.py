@@ -11,31 +11,33 @@ locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 
 def ler_inteiro(msg: str,
-                msg_erro='[Erro de tipo] É esperado um número inteiro, tecle enter para tentar novamente',
+                msg_erro='[Erro de tipo] É esperado um número inteiro,' +
+                'tecle enter para tentar novamente',
                 tentativas=3) -> int:
     while tentativas > 0:
         numero = input(msg)
         if numero.isnumeric():
-            numero = int(numero)
+            numero_inteiro = int(numero)
             break
         else:
             print(msg_erro, f'[Tentativas restantes: {tentativas - 1}]')
             tentativas -= 1
             input()
     else:
-        numero = 0
-    return numero
+        numero_inteiro = 0
+    return numero_inteiro
 
 
 def ler_real(msg: str,
-             msg_erro='[Erro de tipo] É esperado um número real, tecle enter para tentar novamente',
+             msg_erro='[Erro de tipo] É esperado um número real,' +
+             'tecle enter para tentar novamente',
              tentativas=3):
     while tentativas > 0:
         numero = input(msg).replace(',', '.')
         teste = numero.split('.')
         if len(teste) == 2:
             if teste[0].isnumeric() and teste[1].isnumeric():
-                numero = float(numero)
+                numero_real = float(numero)
                 break
             else:
                 print(msg_erro, f'[Tentativas restantes: {tentativas - 1}]')
@@ -46,8 +48,8 @@ def ler_real(msg: str,
             tentativas -= 1
             input()
     else:
-        numero = 0
-    return numero
+        numero_real = 0
+    return numero_real
 
 
 def mostra_real(num_float: float) -> str:
@@ -63,5 +65,4 @@ def pega_hora() -> str:
 
 
 if __name__ == '__main__':
-    num = ler_real('Leia: ')
-    print(mostra_real(num))
+    pass
