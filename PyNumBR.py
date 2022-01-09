@@ -48,4 +48,4 @@ def pega_hora() -> str:
 
 
 if __name__ == '__main__':
-    print(pega_data())
+    pass
