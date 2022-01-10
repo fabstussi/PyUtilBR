@@ -21,12 +21,10 @@ from PyUtilBR import PyUtilTerminal as put
 		- Parâmetros:
 			1. **msg:** preenchimento obrigatório, é a mensagem de interação com o usuário que será impressa no prompt, obrigatoriamente deve ser do tipo str(string).
 			2. **msg_erro:** de preenchimento facultativo, serve para configurar uma mensagem de erro que será exibida para o usuário caso digite algo que não seja um inteiro.
-			3. **tentativas:** por padrão o método está configurado para 3 tentativas, podendo ser configurado para quantas tentativas o usuário terá para digitar um número inteiro, caso falhe o método retorna 0 (zero).
 	- ```ler_real``` -> utilizado para ler números reais com validação, aceita tanto número com separador de decimais com "," (virgula) ou "." (ponto), exibe uma mensagem de erro personalizável caso o usuário digite algo que não seja um número real, possui a quantidade de tentativas para digitar um número real.
 		- Parâmetros:
 			1. **msg:** preenchimento obrigatório, é a mensagem de interação com o usuário que será impressa no prompt, obrigatoriamente deve ser do tipo str(string).
 			1. **msg_erro:** de preenchimento facultativo, serve para configurar uma mensagem de erro que será exibida para o usuário caso digite algo que não seja um número real.
-			1. **tentativas:** por padrão o método está configurado para 3 tentativas, podendo ser configurado para quantas tentativas o usuário terá para digitar um número inteiro, caso falhe o método retorna 0 (zero).
 	- ```mostrar_real``` -> retorna o número com a virgula na separação dos decimais, não possui parâmetros.
 	- ```pega_data``` -> retorna a data no formato dd/mm/aaaa, não tem parâmetros.
 	- ```pega_hora``` -> retorne a hora no formato hh:mm, não tem parâmetros.
@@ -45,6 +43,7 @@ from PyUtilBR import PyUtilTerminal as put
 	- ```titulos_ml``` -> desenha uma caixa na tela com um símbolo definido, com texto de multiplas linhas escrito e centralizado.
 		- Parâmetro:
 			1. __texto:__ uma lista de frases, cada elemento da lista será inserido em uma linha diferênte.
+			2. __Alinhamento:__ Opção para alinha a esquerda 'e' ou centralizar 'c' o texto
 	- ```cria_menu``` -> desenha um menu unumerado em uma caixa na tela.
 		- Parâmetro:
 			1. __menu:__ uma lista com as opções, que irá ser enumerado e exibida na tela.
