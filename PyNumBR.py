@@ -68,7 +68,6 @@ def pega_hora() -> str:
     return: string com a hora atual no formato hh:mm:ss.
     '''
     return datetime.now().strftime('%H:%M:%S')
-    return datetime.now().strftime('%H:%M')
 
 
 if __name__ == '__main__':
