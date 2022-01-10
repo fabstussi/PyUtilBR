@@ -41,7 +41,6 @@ def titulo_ml(titulos: list, alinhamento='e'):
     titulos: lista com os títulos a serem exibidos.
     alinhamento: alinhamento do título ('e' para esquerdo
                                         'c' para centralizado).
-    
     '''
     maior_texto = max(map(lambda item: len(item), titulos))
     desenha_linha('=', maior_texto + 4)
