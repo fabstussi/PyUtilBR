@@ -45,3 +45,6 @@ from PyUtilBR import PyUtilTerminal as put
 	- ```titulos_ml``` -> desenha uma caixa na tela com um símbolo definido, com texto de multiplas linhas escrito e centralizado.
 		- Parâmetro:
 			1. __texto:__ uma lista de frases, cada elemento da lista será inserido em uma linha diferênte.
+	- ```cria_menu``` -> desenha um menu unumerado em uma caixa na tela.
+		- Parâmetro:
+			1. __menu:__ uma lista com as opções, que irá ser enumerado e exibida na tela.
