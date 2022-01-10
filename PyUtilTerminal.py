@@ -8,14 +8,27 @@ import platform
 
 
 def limpa_tela():
+    '''
+    Limpa a tela do terminal.
+    '''
     os.system('cls' if platform.system() == 'Windows' else 'clear')
 
 
 def desenha_linha(simbolo: str, tamanho=10):
+    '''
+    Desenha uma linha com o simbolo passado como parâmetro.
+    simbolo: simbolo a ser usado para desenhar a linha.
+    tamanho: tamanho da linha a ser desenhada.
+    '''
     print(simbolo * tamanho)
 
 
 def titulo(texto: str, simbulo='*'):
+    '''
+    Exibe um título com o texto passado como parâmetro.
+    texto: texto a ser exibido.
+    simbulo: simbolo a ser usado para desenhar o título.
+    '''
     texto = f'** {texto} **'
     desenha_linha(f'{simbulo}', len(texto))
     print(texto)
@@ -23,6 +36,13 @@ def titulo(texto: str, simbulo='*'):
 
 
 def titulo_ml(titulos: list, alinhamento='e'):
+    '''
+    Desenha uma caixa e coloca o título dentro.
+    titulos: lista com os títulos a serem exibidos.
+    alinhamento: alinhamento do título ('e' para esquerdo
+                                        'c' para centralizado).
+    
+    '''
     maior_texto = max(map(lambda item: len(item), titulos))
     desenha_linha('=', maior_texto + 4)
     for texto in titulos:
@@ -34,6 +54,11 @@ def titulo_ml(titulos: list, alinhamento='e'):
 
 
 def cria_menu(menu: list):
+    ''''
+    Desenha uma caixa e coloca o menu dentro.
+    Lista as opções do menu.
+    menu: lista com as opções do menu.
+    '''
     maior_texto = max(map(lambda item: len(item), menu))
     desenha_linha('=', maior_texto + 9)
     for i, item in enumerate(menu):
