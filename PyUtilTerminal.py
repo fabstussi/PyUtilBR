@@ -3,15 +3,15 @@
 # License: GNU GENERAL PUBLIC LICENSE - Version 3, 29 June 2007
 # Fabiano Stussi Pereira® - © 2021
 
-import os
-import platform
+from os import system as ossy
+from platform import system as plsy
 
 
 def limpa_tela():
     '''
     Limpa a tela do terminal.
     '''
-    os.system('cls' if platform.system() == 'Windows' else 'clear')
+    ossy('cls' if plsy() == 'Windows' else 'clear')
 
 
 def desenha_linha(simbolo: str, tamanho=10):
