@@ -1,4 +1,4 @@
-# Projeto: **PyUtilBR**
+# Projeto: **utilitarios_br**
 
 Criado por: Fabiano Stussi Pereira em 01/08/2021.
 Licença: GNU GENERAL PUBLIC LICENSE - Version 3, 29 June 2007
@@ -6,15 +6,15 @@ Licença: GNU GENERAL PUBLIC LICENSE - Version 3, 29 June 2007
 ------------
 
 ## Clonando o repositório:
-Após ter criado o seu projeto, entrar na pasta do projeto e clonar o repositório do PyUtilBR com o comando abaixo:
+Após ter criado o seu projeto, entrar na pasta do projeto e clonar o repositório do utilitarios_br com o comando abaixo:
 ~~~ DOS
-git clone https://github.com/fabstussi/PyUtilBR.git
+git clone https://github.com/fabstussi/utilitarios_br.git
 ~~~
-Após a importação do PyUtilBR, basta entrar no projeto e fazer o import:
+Após a importação do utilitarios_br, basta entrar no projeto e fazer o import:
 ~~~ python
-from PyUtilBR import format_num_data_br as fnd
-from PyUtilBR import desenha_terminal as tela
-from PyUtilBR import cpf_cnpj_phone_utilit as ccp
+from utilitarios_br import format_num_data_br as fnd
+from utilitarios_br import desenha_terminal as tela
+from utilitarios_br import cpf_cnpj_phone_utilit as ccp
 ~~~
 ### O *format_num_data_br* é utilizado para manipular números e data / hora.
 - Métodos:
